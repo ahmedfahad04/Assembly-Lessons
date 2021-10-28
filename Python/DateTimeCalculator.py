@@ -60,7 +60,7 @@ def totalDays(start, end):
     totalDayCount = 0
     currentYear = startingYear
     monthSerial = startingMonth
-
+    monthCount = 0
 
     if startingMonth == endingMonth and startingYear == endingYear:
 
@@ -97,13 +97,24 @@ def totalDays(start, end):
 
             # increment
             monthSerial += 1
+            monthCount += 1
 
-    return totalDayCount
+    return totalDayCount, monthCount
+
 
 
 # main
 startDate = input("Enter starting date (DD/MM/YYYY): ").split("/")
 endDate = input("Enter ending date (DD/MM/YYYY): ").split("/")
 
-count = totalDays(startDate, endDate)
-print("\nTotal Days: ", count, "days (Excluding End day)\n")
+daycount, monthcount = totalDays(startDate, endDate)
+print("\nTotal Days: ", daycount, "days (Excluding End day)\n")
+
+
+print(f"""
+Additional Info-------
+{daycount//365} years {daycount%365} days,
+{monthcount//30} months {monthcount%30} days,
+{daycount//7} weeks {daycount%7} days, 
+""")
+
