@@ -1,10 +1,13 @@
 # test case checking:
 """
-Case 1: month same, date same, year same. (27/11/2021, 27/11/2021)
-Case 2: month same, date same, year different. (27/11/2021, 27/11/2022)
-Case 3: month different, date different, year same. (15/7/2021, 29/11/2021)
-Case 4: month same, date different, year same. (27/11/2021, 29/11/2021)
-Case 5: month different, date same, year same. (27/11/2021, 27/12/2021)
+Case 1: date same, month same, year same. (27/11/2021, 27/11/2021)
+Case 2: date same, month same, year different. (27/11/2021, 27/11/2022)
+Case 3: date same, month different, year same. (29/11/2021, 29/12/2021)
+Case 4: date different, month same, year same. (15/7/2021, 21/7/2021)
+Case 5: date same, month different, year different. (27/11/2021, 27/12/2022)
+Case 6: date different, month different, year same. (7/10/2021, 27/12/2021)
+Case 7: date different, month same, year different. (7/10/2021, 27/10/2023)
+Case 8: date different, month different, year different. (7/10/2020, 27/12/2021)
 """
 
 
