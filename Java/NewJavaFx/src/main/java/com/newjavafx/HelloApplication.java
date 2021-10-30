@@ -1,16 +1,11 @@
 package com.newjavafx;
 
-import javafx.application.Application;
-import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.Border;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
+import javafx.application.*;
+import javafx.geometry.*;
+import javafx.scene.*;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.stage.*;
 
 import java.io.IOException;
 
@@ -42,8 +37,6 @@ public class HelloApplication extends Application {
         hb.getChildren().addAll(vb, vb2);
         hb.setSpacing(5);
         hb.setAlignment(Pos.BOTTOM_CENTER);
-
-
 
         Scene sc = new Scene(hb);
         stage.setScene(sc);
