@@ -8,11 +8,13 @@
 	la $a0, msg
 	syscall
 	
-	add $s0, $zero, 5
-	add $s1, $zero, 10
+	li $s0, 5
+	li $s1, 10
 	
 	add $s2, $s1, $s0
 	
 	li $v0, 1
 	move $a0, $s2	
 	syscall
+	
+	

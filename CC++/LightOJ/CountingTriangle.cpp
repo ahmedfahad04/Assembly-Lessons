@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 #define ll long long
 using namespace std;
-int cnt = 0;
+ll cnt = 0;
 
-bool checkTriangle(int a, int b, int c)
+bool checkTriangle(ll a, ll b, ll c)
 {
     if ((a + b) > c && (b + c) > a && (c + a) > b)
         return true;
@@ -11,7 +11,7 @@ bool checkTriangle(int a, int b, int c)
         return false;
 }
 
-void permute(vector<int> arr, int id, int size, vector<int> val)
+void permute(vector<ll> arr, ll id, ll size, vector<ll> val)
 {
 
     if (val.size() == 2)
@@ -28,6 +28,7 @@ void permute(vector<int> arr, int id, int size, vector<int> val)
 
         return;
     }
+
     else
     {
         val.push_back(arr[id]);
@@ -51,15 +52,15 @@ int main()
         int n;
         cin >> n;
 
-        vector<int> arr, ans;
-        for (int i = 0; i < n; i++)
+        vector<ll> arr, ans;
+        for (ll i = 0; i < n; i++)
         {
-            int x;
+            ll x;
             cin >> x;
             arr.push_back(x);
         }
 
-        for (int i = 0; i < n; i++)
+        for (ll i = 0; i < n; i++)
         {
             permute(arr, i, n, ans);
         }

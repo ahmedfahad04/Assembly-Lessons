@@ -31,6 +31,7 @@
 		### ..................PART - 1: ENTER ELEMENTS IN THE CHARACTER ARRAY....................... ###
 	
 	# input 1 (row) - $t0
+	
 	# show prompt 1
 	li $v0, 4
 	la $a0, rows
@@ -46,6 +47,7 @@
 	
 	
 	# input 2 (col) - $t1
+	
 	# show prompt 1
 	li $v0, 4
 	la $a0, cols
@@ -87,8 +89,7 @@
 	
 	# calculate array size (n)
 	mulu $s1, $t0, $t1
-	addi $s1, $s1, -1	# As indexing starts from 0, we decrease total count($s1) by 1
-	
+	addi $s1, $s1, -1	# As indexing starts from 0, we decrease total count($s1) by 1, {s1 = s1 - 1}
 	
 	
 	#index = $t0 (i = 0)

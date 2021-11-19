@@ -19,7 +19,8 @@
 	syscall
 	
 	# save the entered multiplicand
-	move $t0, $v0
+ 	# move $t0, $v0 (storing a value method 1)
+	add $t0, $zero, $v0 # (storing a value method 2)
 	
 	
 	
