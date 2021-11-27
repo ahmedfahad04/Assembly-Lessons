@@ -18,7 +18,7 @@
 	space: .ascii " "
 	
 	# register listing
-	#
+	
 	# $t0 = row number
 	# $t1 = col number
 	# $t2 = array index
@@ -186,7 +186,6 @@
 			la $a0, space
 			syscall		
 
-
 			bgt $t3, $t1, INNERLOOPEXIT	# check terminating condition (j>col)
 			j INNERLOOP
 			
@@ -200,7 +199,6 @@
 		addu $t4, $t4, $t5	# elem = elem + constvalue
 		addi $t2, $t2, 1	# i++
 		addi $t3, $zero, 0	# j = 0
-		
 		
 		bgt $t2, $t0, OUTERLOOPEXIT	# check terminating condition (i>row)
 		j OUTERLOOP
