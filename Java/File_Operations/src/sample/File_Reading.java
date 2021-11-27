@@ -3,7 +3,7 @@ package sample;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class File_Reading {
 
     public static void main(String[] args) throws Exception {
 
