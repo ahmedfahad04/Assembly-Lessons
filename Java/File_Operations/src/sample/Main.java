@@ -36,6 +36,7 @@ public class Main {
                 }
             }
 
+            int f = 1;
 
             for (String word: words){
 
@@ -45,12 +46,19 @@ public class Main {
                     String cc = String.valueOf(c);
                     cc = cc.toLowerCase();
 
-                    if (cc.equals("a") || cc.equals("e") || cc.equals("i") || cc.equals("o") || cc.equals("u")){
-                        word = word.replace(cc, "#");
+                    if(cc.equals("a") || cc.equals("e") || cc.equals("i") || cc.equals("o") || cc.equals("u")){
+
+                        if(f % 2 == 1) {
+                            System.out.println("Char: " + cc +  ", F: " + f);
+
+                            word = word.replaceFirst(cc, "#");
+                            cc = cc.toUpperCase();
+                            word = word.replaceFirst(cc, "#");
+                        }
+                        f++;
                     }
                 }
 
-                System.out.println("After: " + word);
                 joiner.add(word);
             }
 
