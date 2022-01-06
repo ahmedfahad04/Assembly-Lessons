@@ -1,25 +1,34 @@
-# Question-1:
-# Write a Python program that takes an integer Y from 10 to 20 inclusive as 
-# an input from the user and prints “The user entered Y”. Then the program 
-# should print a series of numbers, starting at Y as the first term of the 
-# series and then the following terms will be according to the formula 
-# Y = (2 x Y) - 5 until Y is less than 100. If the user enters an integer that is 
-# beyond the range mentioned above, your program should print “Wrong input”.
+# 1. Write a function in Python that will take a string text as 
+# input from the user and returns the list of unique characters concatenated 
+# with their ASCII value at the front and back side.
+# ==================================================
+# Sample Input:
+# "pythonbook"
 
-# ====================================================
-# Sample Input 1:
-# 10
-# Sample Output 1:
-# The user entered 10
-# 10, 15, 25, 45, 85
+# Function Calling:
+# function_name("pythonbook")
 
-num = int(input("Enter a nubmer: "))
+# Sample Output:
+# ['112p112', '121y121', '116t116', 
+# '104h104', '111o111', '110n110', '98b98', '107k107']
 
-if num>=20 or num<=10:
-    print("Wrong input")
-else:
-    ans = num
-    print("The user entered ", ans)
-    while ans < 100:
-        print(ans, end=', ')
-        ans = 2*ans - 5
+def myfunc(mystr):
+    newstr = []
+
+    rep_chars = []
+    for i in range(0, len(mystr), 1):
+        for j in range(i+1, len(mystr), 1):
+            if mystr[i] == mystr[j]:
+                rep_chars.append(mystr[i])
+
+    for item in mystr:
+        nstr = ''
+        if item not in rep_chars:
+            nstr += str(ord(item))
+            nstr += item
+            nstr += str(ord(item))
+            newstr.append(nstr)
+
+    return newstr
+
+print(myfunc('pythonbook'))
