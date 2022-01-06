@@ -1,0 +1,37 @@
+~$ means root directory
+/$ means user directory
+
+>> uname (user name)
+>> uname --help (to see al available feature of it)
+>> history (to know which commands you have used earlier)
+>> cd .. (backtrack to the previous folder [catch directory])
+>> touch newFile.txt (to create new file)
+>> rm newFile.txt (to remove the newFile.txt)
+>> mkdir newDirectory (to make a new directory/folder)
+>> rmdir newDirectroy (to remove a directory)
+>> ls -l fileName (to show the permission of any file)
+>> chmod 673 fileName (to change the permission status of fileName)
+>> chmod -x fileName (to make fileName executable)
+
+
+Code for changing permission of any file: 
+1 execute
+2 write
+4 read
+
+now for example:
+You want to assign
+admin - rw
+group - rwx
+public - wx
+
+then the equivalent code would be
+
+admin - 4+2=6
+group - 1+2+4=7
+public - 2+1=3
+
+
+
+
+
